@@ -11,14 +11,15 @@ body {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    background: linear-gradient(-45deg, #1408e9, #9333ea, #1e293b, #0f172a);
-  /* background: linear-gradient(135deg, #0f172a, #1e293b); */
+    /* background: linear-gradient(-45deg, 0f172a, #8000f8, #ff0000, #2667cf); */
+    background: linear-gradient(135deg, #0f172a, #1d2f4d);
 
     background-size: 400% 400%;
-    animation: gradientBG s ease infinite;
+    animation: gradientBG 2s ease infinite;
     overflow: hidden;
-     overflow-y: scroll;
-     scrollbar-width: none; /* Hide scrollbar for Firefox */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
 }
 
 /* 🔹 Top Navbar */
@@ -137,7 +138,7 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(12px);
     animation: fadeIn 1s ease;
-   
+
 }
 
 @keyframes fadeIn {
