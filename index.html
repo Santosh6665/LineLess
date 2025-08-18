@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LineLess - Virtual Queue Management</title>
+  <link rel="stylesheet" href="css/Home.css" />
+  <link rel="stylesheet" href="css/Profile.css" />
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="menu-btn" id="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">LineLess</div>
+
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How it Works</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+      <li><a href="profile.html">Profile</a></li>
+
+    </ul>
+
+    <div class="profile-container">
+      <img src="https://i.pravatar.cc/40" alt="User" class="profile-img" onclick="toggleProfile()" />
+      <div class="profile-dropdown" id="profile-dropdown">
+        <div class="top-profile">
+          <div class="profile-header">
+            <img src="https://i.pravatar.cc/40" alt="User" class="profile-img" />
+            <span>
+              Token
+              <strong>250</strong>
+            </span>
+            <span>
+              Reward
+              <strong>25058</strong>
+            </span>
+          </div>
+          <h4>Santosh Chaudhary</h4>
+          <small class="role">Role: Customer</small>
+          <p class="user-id">User ID: U-548CWR</p>
+          <hr>
+
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Lucknow, India</p>
+          <p>Total Bookings: 12</p>
+
+          <hr>
+
+          <div class="profile-links">
+            <a href="#">My Bookings</a>
+            <a href="#">Settings</a>
+            <a href="#">Log Out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Skip the Wait,<br>Join the Queue</h1>
+    <p>
+      LineLess brings virtual queue management to every local business.
+      Book your spot, track your position, and arrive exactly when it's your turn.
+    </p>
+    <div class="hero-buttons">
+      <a href="#" class="btn primary">Get Started as Customer</a>
+      <a href="#" class="btn secondary">Register Your Business</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-card">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+          role="img">
+          <title>Real-Time Updates</title>
+
+          <!-- circular arrow -->
+          <path d="M12 3v3" />
+          <path d="M12 21v-3" />
+          <path d="M4.9 7.1A9 9 0 1 0 19.1 16.9" />
+
+          <!-- clock face -->
+          <circle cx="12" cy="12" r="4.2" />
+
+          <!-- hour and minute hands -->
+          <path d="M12 12V9.2" />
+          <path d="M12 12.8l1.6 1.6" />
+        </svg>
+
+
+      </div>
+      <h3>Real-Time Updates</h3>
+      <p>Get live notifications about your queue position and estimated wait time.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img"
+          aria-hidden="true">
+          <title>Smart Queue Management</title>
+
+          <!-- Queue tokens / ticket -->
+          <rect x="1.8" y="2.8" width="6.4" height="4.8" rx="0.8" />
+          <line x1="3.6" y1="4.6" x2="6.6" y2="4.6" />
+          <text x="4.2" y="5.4" font-size="2.2" fill="currentColor"
+            style="font-family: Arial, Helvetica, sans-serif;">#7</text>
+
+          <!-- Queue line / separator -->
+          <line x1="10.5" y1="5" x2="22" y2="5" />
+
+          <!-- Three people in a line (simple heads & shoulders) -->
+          <!-- Person 1 -->
+          <circle cx="5.5" cy="13.2" r="1.4" />
+          <path d="M4 15.2c0-0.9 1-1.6 1.5-1.6s1.5.7 1.5 1.6v0.9H4v-0.9z" />
+          <!-- Person 2 -->
+          <circle cx="11.5" cy="12.8" r="1.4" />
+          <path d="M10 14.8c0-0.9 1-1.6 1.5-1.6s1.5.7 1.5 1.6v0.9H10v-0.9z" />
+          <!-- Person 3 -->
+          <circle cx="17.5" cy="12.4" r="1.4" />
+          <path d="M16 14.4c0-0.9 1-1.6 1.5-1.6s1.5.7 1.5 1.6v0.9H16v-0.9z" />
+
+          <!-- Smart signal / connectivity above persons -->
+          <path d="M12 8.2c1.8 0 3.4 0.8 4.6 2" />
+          <path d="M12 6.2c3 0 5.6 1.3 7.4 3.4" />
+          <path d="M12 10.2a1 1 0 1 0 0.001 0" />
+
+          <!-- Minimal gear representing intelligence/automation (right-bottom) -->
+          <g transform="translate(16.5,15.5) scale(0.9)">
+            <path
+              d="M3.7 0.9l0.5 1.1 1.2 0.3-0.3 1.2 0.9 0.9 1.2-0.3 0.6 1.1-0.7 1.1 0.8 1.2-1 0.8-1.1-0.5-1.2 0.4-0.4 1.2H6.2l-0.4-1.2-1.2-0.4-1.1 0.5-1-0.8 0.8-1.2-0.7-1.1 0.6-1.1 1.2 0.3 0.9-0.9-0.3-1.2 1.2-0.3z" />
+            <circle cx="3" cy="3" r="1.1" />
+          </g>
+        </svg>
+
+      </div>
+      <h3>Smart Queue Management</h3>
+      <p>Businesses can efficiently manage customer flow and reduce crowding.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img"
+          aria-hidden="true">
+          <title>Mobile-First Experience</title>
+
+          <!-- Mobile device -->
+          <rect x="6.2" y="2.6" width="11.6" height="19.2" rx="1.6" />
+          <!-- Screen content lines -->
+          <rect x="8" y="5" width="8.8" height="2" rx="0.4" />
+          <rect x="8" y="8.4" width="8.8" height="1.6" rx="0.4" />
+          <rect x="8" y="11.4" width="6.6" height="1.6" rx="0.4" />
+          <rect x="8" y="14.4" width="5" height="1.6" rx="0.4" />
+          <!-- Home button -->
+          <circle cx="12" cy="19.4" r="0.6" fill="currentColor" stroke="none" />
+
+          <!-- Touch/tap indicator (finger) -->
+          <g transform="translate(16,10) scale(0.9)">
+            <path d="M-5 3c0-1.3 1-2.3 2.2-2.3 0.8 0 1.5 0.4 1.9 1" />
+            <path
+              d="M-3 4.5v2.2c0 0.6-0.5 1.1-1.1 1.1H-4.2c-0.6 0-1.1-0.5-1.1-1.1V4.3c0-0.8 0.6-1.4 1.4-1.4 0.4 0 0.8 0.2 1.1 0.5" />
+            <circle cx="-3" cy="3.2" r="0.6" />
+          </g>
+
+          <!-- Arrows indicating responsive / fluid layout -->
+          <path d="M3.6 9.5h3" />
+          <path d="M2 9.5l1.4-1.2" />
+          <path d="M2 9.5l1.4 1.2" />
+
+          <path d="M20.4 14.5h-3" />
+          <path d="M22 14.5l-1.4-1.2" />
+          <path d="M22 14.5l-1.4 1.2" />
+        </svg>
+
+      </div>
+      <h3>Mobile-First Experience</h3>
+      <p>Works seamlessly on any device with PWA support for app-like experience.</p>
+    </div>
+  </section>
+
+  <div class="line"></div>
+
+  <!-- Features Section 2 -->
+  <section class="features2">
+    <h2>Powerful Features for Everyone</h2>
+    <p class="subtitle">
+      Whether you're a customer tired of waiting or a business owner looking to improve
+      customer experience, LineLess has everything you need.
+    </p>
+
+    <div class="feature-cards2">
+      <div class="card">
+        <div class="icon purple">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 
+           9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 
+           6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
+          </svg>
+        </div>
+        <h3>Location-Based Discovery</h3>
+        <p>Find nearby shops and services that support virtual queuing. Filter by
+          category, distance, and wait times.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon green">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon notification-icon" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2" width="60" height="60">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 
+           6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 
+           6.165 6 8.388 6 11v3.159c0 .538-.214 
+           1.055-.595 1.436L4 17h5m6 0v1a3 3 0 
+           11-6 0v-1m6 0H9" />
+          </svg>
+        </div>
+        <h3>Smart Notifications</h3>
+        <p>Get alerts when you're next in line, plus travel time reminders so you
+          arrive at the perfect moment.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon purple">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon analytics-icon" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2" width="60" height="60">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h2v12H4V6zM10 10h2v8h-2v-8zM16 4h2v14h-2V4z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16" />
+          </svg>
+        </div>
+        <h3>Business Analytics</h3>
+        <p>Shop owners get insights on peak hours, average wait times, and customer
+          flow patterns.</p>
+      </div>
+      <div class="card">
+        <div class="icon purple">
+          <svg class="queue-live" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="40" height="40"
+            aria-label="Live Queue Status" role="img">
+            <style>
+              .ql-fill {
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              }
+
+              .ql-dot {
+                fill: currentColor;
+                stroke: none;
+              }
+
+              .wave {
+                transform-origin: 50px 14px;
+                animation: ql-pulse 1.6s ease-in-out infinite;
+              }
+
+              .wave.w2 {
+                animation-delay: .25s;
+                opacity: .7;
+              }
+
+              @keyframes ql-pulse {
+                0% {
+                  transform: scale(0.88);
+                  opacity: .45;
+                }
+
+                50% {
+                  transform: scale(1);
+                  opacity: 1;
+                }
+
+                100% {
+                  transform: scale(0.88);
+                  opacity: .45;
+                }
+              }
+
+              /* Default color — override with CSS (e.g. .queue-live { color:#22c55e }) */
+              .queue-live {
+                color: #22c55e;
+              }
+            </style>
+
+            <!-- three person dots -->
+            <circle cx="10" cy="9.5" r="3" class="ql-fill" />
+            <circle cx="26" cy="9.5" r="3" class="ql-fill" />
+            <circle cx="42" cy="9.5" r="3" class="ql-fill" />
+
+            <!-- baseline / lanes -->
+            <rect x="6" y="17.5" width="14" height="3" rx="1.5" class="ql-fill" fill="currentColor" opacity="1" />
+            <rect x="22" y="17.5" width="12" height="3" rx="1.5" class="ql-fill" fill="currentColor" opacity=".75" />
+            <rect x="38" y="17.5" width="8" height="3" rx="1.5" class="ql-fill" fill="currentColor" opacity=".45" />
+
+            <!-- live badge (dot) -->
+            <circle cx="54" cy="6" r="3.2" class="ql-dot" />
+
+            <!-- animated waves to right to indicate 'live' -->
+            <g class="wave" stroke="currentColor" stroke-width="1.6" fill="none">
+              <path class="w1" d="M50 8c3 0 6 3 6 6s-3 6-6 6" />
+            </g>
+            <g class="wave w2" stroke="currentColor" stroke-width="1.2" fill="none">
+              <path class="w2path" d="M52 6c4 0 8 4 8 8s-4 8-8 8" />
+            </g>
+          </svg>
+        </div>
+        <h3>Live Queue Status</h3>
+        <p>Real-time updates on queue position, estimated wait time, and current service status.</p>
+      </div>
+      <div class="card">
+        <div class="icon purple">
+          <svg class="no-hw-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="44" height="44"
+            role="img" aria-label="No hardware required">
+            <style>
+              .no-hw-icon {
+                color: #ff6b6b;
+              }
+
+              /* override this in CSS as needed */
+              .nh-stroke {
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 2.6;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              }
+
+              .nh-fill {
+                fill: currentColor;
+                opacity: 0.06;
+              }
+
+              /* subtle cloud fill */
+            </style>
+
+            <!-- Cloud (soft fill + outline) -->
+            <path class="nh-fill"
+              d="M16 34c-2.8-6 1.2-12.8 8-13.6 1.5-4.6 6.1-7.8 11.6-6.8 5.6 1 9.3 6.2 8.4 11.7C44 27 44 28 44 28H16z" />
+            <path class="nh-stroke"
+              d="M16 34c-2.8-6 1.2-12.8 8-13.6 1.5-4.6 6.1-7.8 11.6-6.8 5.6 1 9.3 6.2 8.4 11.7C44 27 44 28 44 28H16z" />
+
+            <!-- Plug / hardware silhouette -->
+            <rect x="22" y="34" width="12" height="10" rx="2" class="nh-stroke" />
+            <path class="nh-stroke" d="M26 34v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4" />
+            <path class="nh-stroke" d="M28 46v4" />
+
+            <!-- Circle with diagonal slash (universal "no" sign) -->
+            <circle class="nh-stroke" cx="46" cy="18" r="10" />
+            <path class="nh-stroke" d="M40 24l12-12" />
+
+            <!-- Optional small accent (dot) -->
+            <circle cx="46" cy="18" r="1.2" fill="currentColor" opacity="0.95" />
+          </svg>
+        </div>
+        <h3>No Hardware Required</h3>
+        <p>Pure software solution - businesses just need a smartphone or tablet to get started.</p>
+      </div>
+      <div class="card">
+        <div class="icon purple">
+          <svg class="instant-setup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="56" height="56"
+            role="img" aria-label="Instant setup">
+            <style>
+              .instant-setup {
+                color: #06b6d4;
+              }
+
+              /* override via CSS */
+              .is-gear {
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 2.2;
+                stroke-linejoin: round;
+                stroke-linecap: round;
+                opacity: .95;
+              }
+
+              .is-bolt {
+                fill: currentColor;
+                opacity: 1;
+                transform-origin: 40px 24px;
+              }
+
+              .is-pulse {
+                fill: currentColor;
+                opacity: .12;
+              }
+
+              /* gear rotation */
+              .gear-rot {
+                transform-origin: 20px 34px;
+                animation: gear-spin 4s linear infinite;
+              }
+
+              /* bolt pop (subtle) */
+              .bolt-pop {
+                animation: bolt-pop .9s cubic-bezier(.2, .9, .3, 1) infinite;
+              }
+
+              /* soft pulse behind icon */
+              .pulse-anim {
+                animation: pulse 1.8s ease-in-out infinite;
+              }
+
+              @keyframes gear-spin {
+                from {
+                  transform: rotate(0deg);
+                }
+
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+
+              @keyframes bolt-pop {
+                0% {
+                  transform: translateY(0) scale(1);
+                  opacity: 1;
+                }
+
+                50% {
+                  transform: translateY(-1.5px) scale(1.03);
+                  opacity: .9;
+                }
+
+                100% {
+                  transform: translateY(0) scale(1);
+                  opacity: 1;
+                }
+              }
+
+              @keyframes pulse {
+                0% {
+                  transform: scale(0.95);
+                  opacity: .12;
+                }
+
+                50% {
+                  transform: scale(1.08);
+                  opacity: .07;
+                }
+
+                100% {
+                  transform: scale(0.95);
+                  opacity: .12;
+                }
+              }
+            </style>
+
+            <!-- soft circular pulse background -->
+            <circle class="is-pulse pulse-anim" cx="32" cy="32" r="22" />
+
+            <!-- gear (left) -->
+            <g class="gear-rot">
+              <path class="is-gear"
+                d="M12 34c0-1.6.2-3.1.6-4.5l-2.9-2.2 5.2-9 3.4 1.1c1-1.1 2.2-2 3.6-2.6l.5-3.6h10l.5 3.6c1.4.6 2.6 1.5 3.6 2.6l3.4-1.1 5.2 9-2.9 2.2c.4 1.4.6 3 .6 4.5s-.2 3.1-.6 4.5l2.9 2.2-5.2 9-3.4-1.1c-1 1.1-2.2 2-3.6 2.6l-.5 3.6H20l-.5-3.6c-1.4-.6-2.6-1.5-3.6-2.6l-3.4 1.1-5.2-9 2.9-2.2c-.4-1.4-.6-3-.6-4.5z" />
+              <!-- gear center -->
+              <circle class="is-gear" cx="20" cy="34" r="6" />
+            </g>
+
+            <!-- lightning bolt (instant) -->
+            <g transform="translate(28,8)" class="bolt-pop">
+              <path class="is-bolt" d="M8 4 L3 20 L11 20 L6 32 L23 12 L12 12 L16 4 Z" />
+            </g>
+          </svg>
+        </div>
+        <h3>Instant Setup</h3>
+        <p>Businesses can start managing virtual queues in minutes with our simple onboarding process.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="line"></div>
+  <!-- how-it-works section -->
+  <section class="how-it-works">
+    <h2>How LineLess Works</h2>
+    <p class="subtitle">Simple, intuitive process for both customers and businesses</p>
+
+    <h3 class="for-customers">For Customers</h3>
+
+    <div class="steps">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+        <div class="step-number">1</div>
+        <h4>Find &amp; Select</h4>
+        <p>Browse nearby shops and services, check current wait times</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z" />
+          </svg>
+        </div>
+        <div class="step-number">2</div>
+        <h4>Join Queue</h4>
+        <p>Scan QR code or select service to get your virtual token number</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div class="step-number">3</div>
+        <h4>Track Progress</h4>
+        <p>Get real-time updates on your position and estimated wait time</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div class="step-number">4</div>
+        <h4>Arrive on Time</h4>
+        <p>Get notified when it’s your turn and arrive exactly when needed</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="line"></div>
+
+  <!-- For Businesses Section -->
+  <section class="business-section">
+    <h2 class="business-title">For Businesses</h2>
+
+    <div class="business-features">
+
+      <!-- Card 1 -->
+      <div class="business-card">
+        <div class="business-icon">
+          <!-- QR SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M3 11h8V3H3v8zm2-6h4v4H5V5zm6 16h8v-8h-8v8zm2-6h4v4h-4v-4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm12-4h4V3h-8v4h4v4h-4v2zm-6-2h2V9h-2v2zm6 10h2v-2h-2v2z" />
+          </svg>
+        </div>
+        <h3>Quick Setup</h3>
+        <p>Create your business profile and generate your unique QR code</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="business-card">
+        <div class="business-icon">
+          <!-- Clock SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 1a11 11 0 100 22 11 11 0 000-22zm1 11H7V11h4V6h2v6z" />
+          </svg>
+        </div>
+        <h3>Configure Service</h3>
+        <p>Set service duration, queue capacity, and operating hours</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="business-card">
+        <div class="business-icon">
+          <!-- Check SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M9 16.17l-3.88-3.88L4 13.41 9 18.41 20 7.41l-1.41-1.41z" />
+          </svg>
+        </div>
+        <h3>Manage Queue</h3>
+        <p>Call next customer, track progress, and handle queue efficiently</p>
+      </div>
+
+    </div>
+
+    <button class="business-btn">Start Your Free Trial</button>
+  </section>
+
+
+  <div class="line"></div>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Left Section -->
+      <div class="footer-left">
+        <div class="logo">
+          <svg class="logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+            <defs>
+              <!-- Animated gradient -->
+              <linearGradient id="grad" x1="0" x2="1">
+                <stop offset="0%" stop-color="#6EE7B7" />
+                <stop offset="50%" stop-color="#60A5FA" />
+                <stop offset="100%" stop-color="#A78BFA" />
+                <animate attributeName="x1" values="0;1;0" dur="8s" repeatCount="indefinite" />
+              </linearGradient>
+
+              <!-- Soft shadow -->
+              <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.12" />
+              </filter>
+
+              <!-- Wave path for tokens -->
+              <path id="wave" d="M40 200 C160 140, 260 260, 380 200 S620 140, 760 200" />
+            </defs>
+            <!-- Queue lines -->
+            <g stroke="url(#grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"
+              filter="url(#shadow)">
+              <path d="M80 160 Q200 120 320 160" />
+              <path d="M240 180 Q360 140 480 180" />
+              <path d="M400 140 Q520 100 640 140" />
+            </g>
+
+            <!-- Moving tokens -->
+            <g>
+              <circle r="10" fill="#60A5FA">
+                <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#wave" />
+                </animateMotion>
+              </circle>
+              <circle r="8" fill="#6EE7B7">
+                <animateMotion dur="6s" begin="1.6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#wave" />
+                </animateMotion>
+              </circle>
+              <circle r="6" fill="#A78BFA">
+                <animateMotion dur="6s" begin="3.2s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#wave" />
+                </animateMotion>
+              </circle>
+            </g>
+
+            <!-- Brand text -->
+            <text x="320" y="110" font-family="Inter, sans-serif" font-weight="700" font-size="80"
+              fill="#fff">LineLess</text>
+            <text x="320" y="150" font-family="Inter, sans-serif" font-weight="700" font-size="26" fill="#9CA3AF">
+              Real-time queue & virtual token system
+            </text>
+          </svg>
+
+        </div>
+        <p>
+          Revolutionizing queue management for local businesses.
+          Skip the wait, join the queue virtually, and arrive exactly when it’s your turn.
+        </p>
+        <div class="contact">
+          <span>📧 Santosh@lineless.app</span>
+          <span>📞 +91 6387037649</span>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="footer-links">
+        <div>
+          <h4>For Customers</h4>
+
+          <li><a href="#">Find Nearby Shops</a></li>
+          <li><a href="#">Join Virtual Queue</a></li>
+          <li><a href="#">Track Wait Time</a></li>
+          <li><a href="#">Mobile App</a></li>
+
+        </div>
+        <div>
+          <h4>For Businesses</h4>
+          <li><a href="#">Business Dashboard</a></li>
+          <li><a href="#">Queue Management</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Support</a></li>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+      <p>© 2025 LineLess. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Support</a>
+    </div>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+  <script type="module" src="firebase.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="css/Home.css" />
+  <link rel="stylesheet" href="css/Profile.css" />
+<!-- Styles -->
+<style>/* Profile Page Styles */
+.profile {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.profile h2 {
+  font-size: 1.4rem;
+  margin: 25px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ff8c42;
+  color: #ff8c42;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Paragraph styling */
+.profile p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.profile strong {
+  color: #ffd369;
+}
+
+/* Buttons */
+.profile button {
+  background: linear-gradient(45deg, #ff8c42, #ff3c83);
+  border: none;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  margin: 8px 6px 0 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile button:hover {
+  background: linear-gradient(45deg, #ff3c83, #ff8c42);
+  transform: scale(1.05);
+}
+
+.profile button.delete {
+  background: #ff4d4d;
+}
+
+.profile button.delete:hover {
+  background: #e60000;
+}
+
+/* Referral Code Styling */
+.profile code {
+  background: #2d2d44;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #00e0ff;
+  font-weight: bold;
+}
+
+/* Section divider effect */
+.profile h2::before {
+  content: "➤";
+  color: #ffd369;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile {
+    padding: 18px;
+    margin: 20px;
+  }
+  .profile h2 {
+    font-size: 1.2rem;
+  }
+  .profile p {
+    font-size: 0.9rem;
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+ <!-- Navbar -->
+  <nav>
+    <div class="menu-btn" id="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">LineLess</div>
+
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How it Works</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+      <li><a href="profile.html">Profile</a></li>
+
+    </ul>
+
+    <div class="profile-container">
+      <img src="https://i.pravatar.cc/40" alt="User" class="profile-img" onclick="toggleProfile()" />
+      <div class="profile-dropdown" id="profile-dropdown">
+        <div class="top-profile">
+          <div class="profile-header">
+            <img src="https://i.pravatar.cc/40" alt="User" class="profile-img" />
+            <span>
+              Token
+              <strong>250</strong>
+            </span>
+            <span>
+              Reward
+              <strong>25058</strong>
+            </span>
+          </div>
+          <h4>Santosh Chaudhary</h4>
+          <small class="role">Role: Customer</small>
+          <p class="user-id">User ID: U-548CWR</p>
+          <hr>
+
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Lucknow, India</p>
+          <p>Total Bookings: 12</p>
+
+          <hr>
+
+          <div class="profile-links">
+            <a href="#">My Bookings</a>
+            <a href="#">Settings</a>
+            <a href="#">Log Out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Profile Page -->
+<section class="profile" id="profile">
+  <h2>👤 Personal Information</h2>
+  <p><strong>Full Name:</strong> John Doe</p>
+  <p><strong>Email:</strong> john@example.com ✅</p>
+  <p><strong>Phone:</strong> +91 9876543210</p>
+  <p><strong>DOB:</strong> 15 Aug 1999</p>
+  <p><strong>Gender:</strong> Male</p>
+  <p><strong>Address:</strong> Lucknow, India</p>
+  <p><strong>Bio:</strong> Tech enthusiast & software engineer 🚀</p>
+
+  <h2>📊 Queue & Booking Information</h2>
+  <p><strong>Active Queue:</strong> XYZ Salon – Token #23 – Est. Wait: 12 min</p>
+  <p><strong>Past History:</strong> ABC Clinic, DEF Bank</p>
+  <p><strong>Total Visits:</strong> 15</p>
+  <p><strong>Avg Wait Time Saved:</strong> 2 hrs</p>
+  <p><strong>Favourite Shops:</strong> XYZ Salon, DEF Bank</p>
+
+  <h2>⚙ Preferences & Settings</h2>
+  <p>Preferred Shops: Salons, Clinics</p>
+  <p>Notifications: Push Enabled</p>
+  <p>Queue Alert: 5 min before turn</p>
+  <p>Theme: Dark</p>
+  <p>Language: English</p>
+
+  <h2>🏆 Loyalty & Rewards</h2>
+  <p>Points Earned: 120</p>
+  <p>Badges: Fast Mover 🏅</p>
+  <p>Referral Code: <code>INVITE123</code></p>
+
+  <h2>🔒 Security & Account</h2>
+  <p>Email Verified: ✅</p>
+  <p>Last Login: 15 Aug 2025 (Chrome, Windows)</p>
+  <button>Change Password</button>
+  <button>Edit Profile</button>
+  <button class="delete">Delete Account</button>
+</section>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

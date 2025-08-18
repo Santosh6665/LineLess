@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Auth Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #4f46e5, #9333ea, #f43f5e, #06b6d4);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Floating circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .circle:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            left: 10%;
+            top: 20%;
+            animation-duration: 9s;
+        }
+
+        .circle:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            right: 15%;
+            top: 25%;
+            animation-duration: 6s;
+        }
+
+        .circle:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            left: 25%;
+            bottom: 15%;
+            animation-duration: 7s;
+        }
+
+        .circle:nth-child(4) {
+            width: 150px;
+            height: 150px;
+            right: 10%;
+            bottom: 10%;
+            animation-duration: 10s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Form Container */
+        .container {
+            position: relative;
+            width: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(12px);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #000000;
+            font-size: 26px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: #000000;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 8px #fff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #9333ea, #4f46e5);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .toggle-text a {
+            color: #ffdd57;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .error {
+            color: #ff4d6d;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        /* Slide animation for forms */
+        form {
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    
+    <!-- floating shapes -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="container" id="form-container">
+        <!-- Sign In Form -->
+        <form id="signin-form">
+            <h2>Sign In</h2>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="signin-email" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="signin-password" required>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+            <p class="toggle-text">Don't have an account? <a onclick="toggleForm()">Sign Up</a></p>
+            <p class="error" id="signin-error"></p>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form" style="display:none;">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="signup-name" required>
+            </div>
+            <div class="form-group">
+                <label>User ID</label>
+                <input type="text" id="signup-userid" required>
+            </div>
+            <div class="form-group">
+                <label>Contact Number</label>
+                <input type="tel" id="signup-contact" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number"
+                    required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="signup-email" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="signup-password" required>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" id="signup-confirm" required>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <p class="toggle-text">Already have an account? <a onclick="toggleForm()">Sign In</a></p>
+            <p class="error" id="signup-error"></p>
+        </form>
+    </div>
+
+    <script>
+        const signinForm = document.getElementById("signin-form");
+        const signupForm = document.getElementById("signup-form");
+        const signinError = document.getElementById("signin-error");
+        const signupError = document.getElementById("signup-error");
+
+        function toggleForm() {
+            signinForm.style.display = signinForm.style.display === "none" ? "block" : "none";
+            signupForm.style.display = signupForm.style.display === "none" ? "block" : "none";
+        }
+
+        // Sign In handler
+        signinForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = document.getElementById("signin-email").value;
+            const password = document.getElementById("signin-password").value;
+
+            if (email === "" || password === "") {
+                signinError.textContent = "⚠️ Please enter email and password.";
+            } else {
+                signinError.textContent = "";
+                alert("✅ Signed in successfully!\nEmail: " + email);
+            }
+        });
+
+        // Sign Up handler
+        signupForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("signup-name").value;
+            const userid = document.getElementById("signup-userid").value;
+            const contact = document.getElementById("signup-contact").value;
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
+            const confirm = document.getElementById("signup-confirm").value;
+
+            if (password !== confirm) {
+                signupError.textContent = "⚠️ Passwords do not match!";
+            } else if (!/^\d{10}$/.test(contact)) {
+                signupError.textContent = "⚠️ Contact number must be 10 digits!";
+            } else {
+                signupError.textContent = "";
+                alert("🎉 Account created!\nName: " + name +
+                    "\nUser ID: " + userid +
+                    "\nContact: " + contact +
+                    "\nEmail: " + email);
+                toggleForm(); // switch back to Sign In
+            }
+        });
+    </script>
+
+</body>
+
+</html>

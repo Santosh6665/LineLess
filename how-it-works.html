@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="css/Home.css" />
+  <link rel="stylesheet" href="css/Profile.css" />
+
+</head>
+<body>
+ <!-- Navbar -->
+  <nav>
+    <div class="menu-btn" id="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">LineLess</div>
+
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How it Works</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+      <li><a href="profile.html">Profile</a></li>
+
+    </ul>
+
+    <div class="profile-container">
+      <img src="https://i.pravatar.cc/40" alt="User" class="profile-img" onclick="toggleProfile()" />
+      <div class="profile-dropdown" id="profile-dropdown">
+        <div class="top-profile">
+          <div class="profile-header">
+            <img src="https://i.pravatar.cc/40" alt="User" class="profile-img" />
+            <span>
+              Token
+              <strong>250</strong>
+            </span>
+            <span>
+              Reward
+              <strong>25058</strong>
+            </span>
+          </div>
+          <h4>Santosh Chaudhary</h4>
+          <small class="role">Role: Customer</small>
+          <p class="user-id">User ID: U-548CWR</p>
+          <hr>
+
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Lucknow, India</p>
+          <p>Total Bookings: 12</p>
+
+          <hr>
+
+          <div class="profile-links">
+            <a href="#">My Bookings</a>
+            <a href="#">Settings</a>
+            <a href="#">Log Out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- how-it-works section -->
+  <section class="how-it-works">
+    <h2>How LineLess Works</h2>
+    <p class="subtitle">Simple, intuitive process for both customers and businesses</p>
+
+    <h3 class="for-customers">For Customers</h3>
+
+    <div class="steps">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+        <div class="step-number">1</div>
+        <h4>Find &amp; Select</h4>
+        <p>Browse nearby shops and services, check current wait times</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z" />
+          </svg>
+        </div>
+        <div class="step-number">2</div>
+        <h4>Join Queue</h4>
+        <p>Scan QR code or select service to get your virtual token number</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div class="step-number">3</div>
+        <h4>Track Progress</h4>
+        <p>Get real-time updates on your position and estimated wait time</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28"
+            height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div class="step-number">4</div>
+        <h4>Arrive on Time</h4>
+        <p>Get notified when it’s your turn and arrive exactly when needed</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="line"></div>
+
+  <!-- For Businesses Section -->
+  <section class="business-section">
+    <h2 class="business-title">For Businesses</h2>
+
+    <div class="business-features">
+
+      <!-- Card 1 -->
+      <div class="business-card">
+        <div class="business-icon">
+          <!-- QR SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M3 11h8V3H3v8zm2-6h4v4H5V5zm6 16h8v-8h-8v8zm2-6h4v4h-4v-4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm12-4h4V3h-8v4h4v4h-4v2zm-6-2h2V9h-2v2zm6 10h2v-2h-2v2z" />
+          </svg>
+        </div>
+        <h3>Quick Setup</h3>
+        <p>Create your business profile and generate your unique QR code</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="business-card">
+        <div class="business-icon">
+          <!-- Clock SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 1a11 11 0 100 22 11 11 0 000-22zm1 11H7V11h4V6h2v6z" />
+          </svg>
+        </div>
+        <h3>Configure Service</h3>
+        <p>Set service duration, queue capacity, and operating hours</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="business-card">
+        <div class="business-icon">
+          <!-- Check SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M9 16.17l-3.88-3.88L4 13.41 9 18.41 20 7.41l-1.41-1.41z" />
+          </svg>
+        </div>
+        <h3>Manage Queue</h3>
+        <p>Call next customer, track progress, and handle queue efficiently</p>
+      </div>
+
+    </div>
+
+    <button class="business-btn">Start Your Free Trial</button>
+  </section>
+      <div class="line"></div>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Left Section -->
+      <div class="footer-left">
+        <div class="logo">
+          <svg class="logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+            <defs>
+              <!-- Animated gradient -->
+              <linearGradient id="grad" x1="0" x2="1">
+                <stop offset="0%" stop-color="#6EE7B7" />
+                <stop offset="50%" stop-color="#60A5FA" />
+                <stop offset="100%" stop-color="#A78BFA" />
+                <animate attributeName="x1" values="0;1;0" dur="8s" repeatCount="indefinite" />
+              </linearGradient>
+
+              <!-- Soft shadow -->
+              <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.12" />
+              </filter>
+
+              <!-- Wave path for tokens -->
+              <path id="wave" d="M40 200 C160 140, 260 260, 380 200 S620 140, 760 200" />
+            </defs>
+            <!-- Queue lines -->
+            <g stroke="url(#grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"
+              filter="url(#shadow)">
+              <path d="M80 160 Q200 120 320 160" />
+              <path d="M240 180 Q360 140 480 180" />
+              <path d="M400 140 Q520 100 640 140" />
+            </g>
+
+            <!-- Moving tokens -->
+            <g>
+              <circle r="10" fill="#60A5FA">
+                <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#wave" />
+                </animateMotion>
+              </circle>
+              <circle r="8" fill="#6EE7B7">
+                <animateMotion dur="6s" begin="1.6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#wave" />
+                </animateMotion>
+              </circle>
+              <circle r="6" fill="#A78BFA">
+                <animateMotion dur="6s" begin="3.2s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#wave" />
+                </animateMotion>
+              </circle>
+            </g>
+
+            <!-- Brand text -->
+            <text x="320" y="110" font-family="Inter, sans-serif" font-weight="700" font-size="80"
+              fill="#fff">LineLess</text>
+            <text x="320" y="150" font-family="Inter, sans-serif" font-weight="700" font-size="26" fill="#9CA3AF">
+              Real-time queue & virtual token system
+            </text>
+          </svg>
+
+        </div>
+        <p>
+          Revolutionizing queue management for local businesses.
+          Skip the wait, join the queue virtually, and arrive exactly when it’s your turn.
+        </p>
+        <div class="contact">
+          <span>📧 Santosh@lineless.app</span>
+          <span>📞 +91 6387037649</span>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="footer-links">
+        <div>
+          <h4>For Customers</h4>
+
+          <li><a href="#">Find Nearby Shops</a></li>
+          <li><a href="#">Join Virtual Queue</a></li>
+          <li><a href="#">Track Wait Time</a></li>
+          <li><a href="#">Mobile App</a></li>
+
+        </div>
+        <div>
+          <h4>For Businesses</h4>
+          <li><a href="#">Business Dashboard</a></li>
+          <li><a href="#">Queue Management</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Support</a></li>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+      <p>© 2025 LineLess. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Support</a>
+    </div>
+  </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
